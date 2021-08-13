@@ -1,0 +1,121 @@
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+* ::after ::before {
+  box-sizing: border-box;
+}
+
+header {
+  font-size: 2rem;
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 285px;
+  min-height: 480px;
+  margin: auto;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 5%;
+  box-shadow: 5px 5px 5px 0px rgb(0, 0, 0, 0.5);
+}
+
+.display {
+  width: 250px;
+  height: 80px;
+  border: 1px solid #028090;
+  margin: auto auto 15px auto;
+  background-color: #028090;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.previous {
+  height: 30px;
+  color: rgb(11, 218, 81);
+  font-size: 1.5rem;
+  margin-right: 0.5em;
+}
+
+.current {
+  height: 50px;
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+  margin-right: 0.5em;
+}
+
+.buttons {
+  height: 350px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    "c back modular divide"
+    "seven eight nine add"
+    "four five six minus"
+    "one two thre multiply"
+    "zero apos result result";
+  gap: 8px;
+  font-size: 20px;
+}
+
+button {
+  border: 1px solid #028090;
+  border-radius: 50%;
+  background-color: #028090;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 4px 5px 5px 0px rgb(0, 0, 0, 0.3);
+}
+
+button:hover {
+  transform: scale(1.05);
+  transition: all 0.15s ease-in-out;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+.clear:hover {
+  background-color: rgb(255, 0, 0, 0.5);
+}
+
+.delete:hover {
+  background-color: rgb(255, 0, 0, 0.5);
+}
+
+.operator:hover {
+  background-color: rgb(11, 218, 81);
+}
+
+.result:hover {
+  background-color: rgb(11, 218, 81);
+}
+
+.number:hover {
+  background-color: rgb(64, 224, 208);
+}
+
+#result {
+  grid-area: result;
+  border-radius: 30px;
+}
